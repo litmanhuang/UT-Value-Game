@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a240f1921dd144e0b803aae56b3be135, type: 3}
+  m_Name: Principle
+  m_EditorClassIdentifier: 
+  id: 2
+  title: 'Principles versus politeness '
+  description: "Peter, who is an ecologist, is very troubled by the way animals and
+    birds are being treated in contemporary mass-production of food. He believes
+    that living in a cage is harassing and he \u201Cvotes with his wallet\u201D \u2013
+    Peter only purchases eggs from free-range chickens or \u201Chappy chicken\u201D
+    eggs. His friend James invites Peter to visit and James\u2019s wife has baked
+    an amazing aromatic golden-yellow cake. When Peter asks about the eggs used,
+    he finds out that they used regular store-bought eggs because James\u2019s family
+    looks at the price tag more than anything else. Peter needs to decide whether
+    to stay true to his principles or to be polite and have some cake. "
+  question: "What would you do in Peter\u2019s position? "
+  answer1: 'I will explain to James that I do not want to go against my beliefs and
+    I will not eat the cake. (Hero) '
+  answer2: "I would like to keep my good relationship with James and I will say,
+    \u201COh, I just ate! I am sorry, I will skip the cake.\u201D (Trader) "
+  answer3: 'I do not want to offend them; you have to honour the lady of the house.
+    I will take as small a piece as possible. (Healer) '
+  answer4: 'The cake is already baked and the egg-producer got their money anyway.
+    There is no point in refusing now; I will thank my hosts and eat the cake. (Ruler) '

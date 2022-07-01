@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a240f1921dd144e0b803aae56b3be135, type: 3}
+  m_Name: Frog
+  m_EditorClassIdentifier: 
+  id: 1
+  title: "Frog\u2019s dilemma "
+  description: 'An evil witch turns the first-born son of a king into a frog. He
+    can become human again only when a highborn princess kisses him, and then he
+    must marry the princess. Luckily, the crown princess from the neighbouring kingdom
+    has agreed to kiss the prince. The problem is that the princess has a very bad
+    temper, is selfish and does not care about her people. The prince is not keen
+    on the idea of marrying her. The princess has managed to scare away every possible
+    suitor so far. '
+  question: 'What would you do as the frog prince? '
+  answer1: 'I will offer her a bartering deal: she will turn me into a prince and
+    let me go free, and in return, I will give her half of my kingdom once I inherit
+    it. (Trader) '
+  answer2: 'I want to become human again. If the price to be paid is a life with
+    the princess, so be it. I am willing to suffer for it. I will allow the princess
+    to kiss me and I try to have a good relationship with her. I believe in the power
+    of love! (Healer) '
+  answer3: 'I would never let her kiss me! It is likely there are other princesses
+    out there somewhere. I would rather be a frog than owe my life to someone who
+    could easily make it a living hell. I will jump away. (Hero) '
+  answer4: 'I will accept her kiss and become human again. Romance is overrated.
+    If I marry her, I believe that everyone can benefit if we join our kingdoms and
+    even the people living there. (Ruler). '
