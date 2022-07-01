@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using TMPro;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class SituationGameManager : MonoBehaviour
 {
@@ -33,8 +33,8 @@ public class SituationGameManager : MonoBehaviour
     public void DrawSituationCard () 
     {
             GameObject mySituationCard = Instantiate(situationCard, new Vector2(0, 0), Quaternion.identity);
-            mySituationCard.GetComponent<SituationCard>().LoadSituationCardData(SituationData[1]);
-            mySituationCard.transform.SetParent(cardSlots[0], false);
+            mySituationCard.GetComponent<SituationCard>().LoadSituationCardData(SituationData[Random.Range(0,5)]);
+            mySituationCard.transform.SetParent(cardSlots[1], false);
     }
 
     }
