@@ -11,7 +11,7 @@ public class SituationCard : MonoBehaviour
     public TextMeshProUGUI situationCardIdText;
     public TextMeshProUGUI situationCardTitleText;
 
-    public SituationModelSO situation;
+    private SituationModelSO situation;
     
     public  void LoadSituationCardData(SituationModelSO situationData)
     {

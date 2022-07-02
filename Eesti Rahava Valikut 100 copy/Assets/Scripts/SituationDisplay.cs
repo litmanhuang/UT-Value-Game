@@ -15,18 +15,18 @@ public class SituationDisplay : MonoBehaviour
     public TextMeshProUGUI situationDisplayAnswer3Text;
     public TextMeshProUGUI situationDisplayAnswer4Text;
 
-    public SituationModelSO[] situations;
+    private SituationModelSO situation;
 
     public void PopulateSituationDisplay(int situationCardIndex)
     {
-        situationDisplayIdText.text = situations[situationCardIndex].id.ToString();
-        situationDisplayTitleText.text = situations[situationCardIndex].title;
-        situationDisplayDescriptionText.text = situations[situationCardIndex].description;
-        situationDisplayQuestionText.text = situations[situationCardIndex].question;
-        situationDisplayAnswer1Text.text = situations[situationCardIndex].answer1;
-        situationDisplayAnswer2Text.text = situations[situationCardIndex].answer2;
-        situationDisplayAnswer3Text.text = situations[situationCardIndex].answer3;
-        situationDisplayAnswer4Text.text = situations[situationCardIndex].answer4;
+        situationDisplayIdText.text = situation.id.ToString();
+        situationDisplayTitleText.text = situation.title;
+        situationDisplayDescriptionText.text = situation.description;
+        situationDisplayQuestionText.text = situation.question;
+        situationDisplayAnswer1Text.text = situation.answer1;
+        situationDisplayAnswer2Text.text = situation.answer2;
+        situationDisplayAnswer3Text.text = situation.answer3;
+        situationDisplayAnswer4Text.text = situation.answer4;
     }
 
 }
