@@ -11,11 +11,11 @@ public class SituationCard : MonoBehaviour
     public TextMeshProUGUI situationCardIdText;
     public TextMeshProUGUI situationCardTitleText;
 
-    private SituationModelSO situation;
+    public SituationModelSO situationData;
     
-    public  void LoadSituationCardData(SituationModelSO situationData)
+    public  void LoadSituationCardData(SituationModelSO situation)
     {
-        situation = situationData;
+        situationData = situation;
         situationCardIdText.text = situation.id.ToString(); 
         situationCardTitleText.text = situation.title;
         

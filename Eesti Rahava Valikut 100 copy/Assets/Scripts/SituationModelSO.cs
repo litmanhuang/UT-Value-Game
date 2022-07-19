@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Situation Card", menuName = "New Situation Card")]
+[CreateAssetMenu(fileName = "Situation Card", menuName = "ScriptableObjects/New Situation Card")]
 public class SituationModelSO : ScriptableObject {
     
     public int id;
