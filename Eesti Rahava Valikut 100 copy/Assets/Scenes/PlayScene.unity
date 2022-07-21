@@ -224,7 +224,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87223706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -49.999954}
   m_SizeDelta: {x: 1200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87223708
@@ -1522,6 +1522,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   situationCard: {fileID: 1590141648830759137, guid: 83737db38812a4188ae3fef7d201ea74, type: 3}
   situationDisplayId: {fileID: 472805692}
+  situationDisplayTitle: {fileID: 1222269631}
+  situationDisplayDescription: {fileID: 177451762}
+  situationDisplayQuestion: {fileID: 1722802811}
+  situationDisplayAnswer1: {fileID: 2074969140}
+  situationDisplayAnswer2: {fileID: 1418074833}
+  situationDisplayAnswer3: {fileID: 396125494}
+  situationDisplayAnswer4: {fileID: 623873827}
   situationDrawn: []
   deck: []
   cardSlots:
@@ -2906,7 +2913,6 @@ GameObject:
   - component: {fileID: 1741184975}
   - component: {fileID: 1741184977}
   - component: {fileID: 1741184976}
-  - component: {fileID: 1741184978}
   m_Layer: 5
   m_Name: DisplayArea
   m_TagString: Untagged
@@ -2979,27 +2985,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741184974}
   m_CullTransparentMesh: 1
---- !u!114 &1741184978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741184974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a2a7d4e7b904acb95594baa4928426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  situationDisplayIdText: {fileID: 472805692}
-  situationDisplayTitleText: {fileID: 1222269631}
-  situationDisplayDescriptionText: {fileID: 177451762}
-  situationDisplayQuestionText: {fileID: 1722802811}
-  situationDisplayAnswer1Text: {fileID: 2074969140}
-  situationDisplayAnswer2Text: {fileID: 1418074833}
-  situationDisplayAnswer3Text: {fileID: 396125494}
-  situationDisplayAnswer4Text: {fileID: 623873827}
-  situationDisplayData: {fileID: 0}
 --- !u!1 &1744404598
 GameObject:
   m_ObjectHideFlags: 0

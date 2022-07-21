@@ -13,6 +13,13 @@ public class SituationGameManager : MonoBehaviour
     public GameObject situationCard;
 
     public TextMeshProUGUI situationDisplayId;
+    public TextMeshProUGUI situationDisplayTitle;
+    public TextMeshProUGUI situationDisplayDescription;
+    public TextMeshProUGUI situationDisplayQuestion;
+    public TextMeshProUGUI situationDisplayAnswer1;
+    public TextMeshProUGUI situationDisplayAnswer2;
+    public TextMeshProUGUI situationDisplayAnswer3;
+    public TextMeshProUGUI situationDisplayAnswer4;
 
     public List<SituationModelSO> situationDrawn;
 
@@ -47,8 +54,14 @@ public class SituationGameManager : MonoBehaviour
     }
     public void DisplaySituation () 
     {
-        Debug.Log(situationDrawn[0].id.ToString());
         situationDisplayId.text = situationDrawn[0].id.ToString();
+        situationDisplayTitle.text = situationDrawn[0].title;
+        situationDisplayDescription.text = situationDrawn[0].description;
+        situationDisplayQuestion.text = situationDrawn[0].question;
+        situationDisplayAnswer1.text = situationDrawn[0].answer1;
+        situationDisplayAnswer2.text = situationDrawn[0].answer2;
+        situationDisplayAnswer3.text = situationDrawn[0].answer3;
+        situationDisplayAnswer4.text = situationDrawn[0].answer4;
     }
 
 
