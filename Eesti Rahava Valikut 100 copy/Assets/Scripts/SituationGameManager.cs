@@ -26,7 +26,6 @@ public class SituationGameManager : MonoBehaviour
     public List<GameObject> deck;
 
 
-    public Transform [] cardSlots;
 
 
     public SituationModelSO[] SituationData;
@@ -42,6 +41,11 @@ public class SituationGameManager : MonoBehaviour
 
     }
     
+
+    public Transform [] cardSlots;
+    public bool [] availableCardSlots;
+    public string results;
+
     public void DrawSituationCard () 
     {
         //instantiating the prefab
@@ -50,7 +54,22 @@ public class SituationGameManager : MonoBehaviour
         mySituationCard.GetComponent<SituationCard>().LoadSituationCardData(SituationData[Random.Range(0,5)]);
         //store the scritable object into the list
         situationDrawn.Add(mySituationCard.GetComponent<SituationCard>().situationData);
-        mySituationCard.transform.SetParent(cardSlots[0], false);
+
+        foreach (var item in situationDrawn){
+            results += item.id.ToString() + ", "; 
+        }
+        
+        Debug.Log(results);
+  
+        for  (int i = 0; i < cardSlots.Length; i++){
+            if (availableCardSlots[i] == true){
+            mySituationCard.transform.SetParent(cardSlots[i], false);
+            availableCardSlots[i]=false;
+            return;
+            }
+        }
+        
+
     }
     public void DisplaySituation () 
     {
