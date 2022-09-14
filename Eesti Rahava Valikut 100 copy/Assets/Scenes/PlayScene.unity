@@ -1310,7 +1310,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 913728277}
         m_TargetAssemblyTypeName: SituationGameManager, Assembly-CSharp
-        m_MethodName: DrawSituationCard
+        m_MethodName: DrawCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1520,7 +1520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e7cbd5831214439a44120b26ca7706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  situationCard: {fileID: 1590141648830759137, guid: 83737db38812a4188ae3fef7d201ea74, type: 3}
   situationDisplayId: {fileID: 472805692}
   situationDisplayTitle: {fileID: 1222269631}
   situationDisplayDescription: {fileID: 177451762}
@@ -1531,13 +1530,7 @@ MonoBehaviour:
   situationDisplayAnswer4: {fileID: 623873827}
   situationDrawn: []
   deck: []
-  SituationData:
-  - {fileID: 11400000, guid: bbeda9e7da7fc4e9a8fac0966627a97e, type: 2}
-  - {fileID: 11400000, guid: 71467c11275d344f2962e47197db6dc8, type: 2}
-  - {fileID: 11400000, guid: 012e923e1357846c6b70215eeb643103, type: 2}
-  - {fileID: 11400000, guid: 4fdc696855da0458382e4ad24fefd091, type: 2}
-  - {fileID: 11400000, guid: 9ef466dc8ff7c44f3814cc179eff91a3, type: 2}
-  - {fileID: 11400000, guid: 6a7d5db8c48594a50a6185b05b50c773, type: 2}
+  All_Situation_SO: []
   cardSlots:
   - {fileID: 679619738}
   - {fileID: 994203061}
@@ -1547,6 +1540,8 @@ MonoBehaviour:
   - {fileID: 925767161}
   availableCardSlots: 010101010101
   results: 
+  situationCard: {fileID: 1590141648830759137, guid: 83737db38812a4188ae3fef7d201ea74, type: 3}
+  cardInstantiated_List: []
 --- !u!1 &925767160
 GameObject:
   m_ObjectHideFlags: 0

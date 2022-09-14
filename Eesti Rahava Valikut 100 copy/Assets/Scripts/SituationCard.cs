@@ -13,7 +13,7 @@ public class SituationCard : MonoBehaviour
 
     public SituationModelSO situationData;
     
-    public  void LoadSituationCardData(SituationModelSO situation)
+    public  void LoadCardData(SituationModelSO situation)
     {
         situationData = situation;
         situationCardIdText.text = situation.id.ToString(); 

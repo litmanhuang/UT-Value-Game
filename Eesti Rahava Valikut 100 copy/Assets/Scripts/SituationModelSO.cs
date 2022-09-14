@@ -11,6 +11,7 @@ public class SituationModelSO : ScriptableObject {
     public string answer2;
     public string answer3;
     public string answer4;
+    public bool hasBeenCoupled;
     
 }
 
