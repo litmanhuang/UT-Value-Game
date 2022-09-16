@@ -20,3 +20,4 @@ MonoBehaviour:
   answer2: 6
   answer3: 6
   answer4: 6
+  hasBeenCoupled: 1

@@ -49,6 +49,7 @@ public class SituationGameManager : MonoBehaviour
     public List<SituationModelSO> situation_SO_To_Coupled;
 
     public GameObject situationCard;
+    public GameObject cardInstantiated;
     public List <GameObject> cardInstantiated_List;
     public SituationModelSO randomSituation_SO;
 
@@ -59,7 +60,7 @@ public class SituationGameManager : MonoBehaviour
 
             for (int i = 0; i < cardSlots.Length; i++) {
                 if (availableCardSlots[i] ==  true){
-                    GameObject cardInstantiated = Instantiate(situationCard, new Vector2(0, 0), Quaternion.identity);
+                    cardInstantiated = Instantiate(situationCard, new Vector2(0, 0), Quaternion.identity);
                     cardInstantiated_List.Add(cardInstantiated);
 
                     cardInstantiated.GetComponent<SituationCard>().LoadCardData(situation_SO_To_Coupled[Random.Range(0,situation_SO_To_Coupled.Count)]);
@@ -74,11 +75,26 @@ public class SituationGameManager : MonoBehaviour
                     return;
                 }
             }
-
-
     }     
 
-    
+    public void ShuffleCard () {
+
+        if(situation_SO_Removed.Count>1) {
+            foreach (SituationModelSO item in situation_SO_Removed){
+                situation_SO_To_Coupled.Add(item);
+            }
+            foreach (GameObject item in cardInstantiated_List){
+                Destroy(item);
+            }
+            cardInstantiated_List.Clear();
+            
+             for(int i = 0; i < availableCardSlots.Length ; i++) {
+                availableCardSlots[i] = true;
+            }
+
+        }
+        
+    }
 
 
 
