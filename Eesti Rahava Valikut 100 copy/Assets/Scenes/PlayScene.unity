@@ -1528,9 +1528,15 @@ MonoBehaviour:
   situationDisplayAnswer2: {fileID: 1418074833}
   situationDisplayAnswer3: {fileID: 396125494}
   situationDisplayAnswer4: {fileID: 623873827}
-  situationDrawn: []
+  situation_SO_Coupled: []
   deck: []
-  All_Situation_SO: []
+  all_Situation_SO:
+  - {fileID: 11400000, guid: bbeda9e7da7fc4e9a8fac0966627a97e, type: 2}
+  - {fileID: 11400000, guid: 71467c11275d344f2962e47197db6dc8, type: 2}
+  - {fileID: 11400000, guid: 012e923e1357846c6b70215eeb643103, type: 2}
+  - {fileID: 11400000, guid: 4fdc696855da0458382e4ad24fefd091, type: 2}
+  - {fileID: 11400000, guid: 9ef466dc8ff7c44f3814cc179eff91a3, type: 2}
+  - {fileID: 11400000, guid: 6a7d5db8c48594a50a6185b05b50c773, type: 2}
   cardSlots:
   - {fileID: 679619738}
   - {fileID: 994203061}

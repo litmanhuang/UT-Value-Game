@@ -10,7 +10,6 @@ public class SituationCard : MonoBehaviour
 {
     public TextMeshProUGUI situationCardIdText;
     public TextMeshProUGUI situationCardTitleText;
-
     public SituationModelSO situationData;
     
     public  void LoadCardData(SituationModelSO situation)
@@ -18,6 +17,7 @@ public class SituationCard : MonoBehaviour
         situationData = situation;
         situationCardIdText.text = situation.id.ToString(); 
         situationCardTitleText.text = situation.title;
+        situation.hasBeenCoupled = true;
         
     }
 }

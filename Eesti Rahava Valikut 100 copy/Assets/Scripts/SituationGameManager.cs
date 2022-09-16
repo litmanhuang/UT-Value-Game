@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -19,19 +20,19 @@ public class SituationGameManager : MonoBehaviour
     public TextMeshProUGUI situationDisplayAnswer3;
     public TextMeshProUGUI situationDisplayAnswer4;
 
-    public List<SituationModelSO> situation_SO_Coupled;
+ 
 
     public List<GameObject> deck;
 
 
 
 
-    public SituationModelSO[] all_Situation_SO;
+ 
     
 
     private void Start()
     {
-   
+        situation_SO_To_Coupled = all_Situation_SO.ToList();
     }
     
     private void Update()
@@ -39,37 +40,40 @@ public class SituationGameManager : MonoBehaviour
 
     }
     
-
+    public SituationModelSO[] all_Situation_SO;
     public Transform [] cardSlots;
     public bool [] availableCardSlots;
-    public string results;
-
-
-
-
+    // public string results;
+    public List<SituationModelSO> situation_SO_Coupled;
+    public List<SituationModelSO> situation_SO_Removed; 
+    public List<SituationModelSO> situation_SO_To_Coupled;
 
     public GameObject situationCard;
     public List <GameObject> cardInstantiated_List;
+    public SituationModelSO randomSituation_SO;
+
     public void DrawCard () {
+
+        Debug.Log("Situations left =: " + situation_SO_To_Coupled.Count);
+        Debug.Log("Situations removed =: " + situation_SO_Removed.Count);
 
             for (int i = 0; i < cardSlots.Length; i++) {
                 if (availableCardSlots[i] ==  true){
                     GameObject cardInstantiated = Instantiate(situationCard, new Vector2(0, 0), Quaternion.identity);
                     cardInstantiated_List.Add(cardInstantiated);
 
+                    cardInstantiated.GetComponent<SituationCard>().LoadCardData(situation_SO_To_Coupled[Random.Range(0,situation_SO_To_Coupled.Count)]);
+                    
+                    SituationModelSO situation_SO_To_Be_Removed = cardInstantiated.GetComponent<SituationCard>().situationData;
+                    situation_SO_To_Coupled.Remove(situation_SO_To_Be_Removed);
+                    situation_SO_Removed.Add(situation_SO_To_Be_Removed);
 
-                    cardInstantiated.GetComponent<SituationCard>().LoadCardData(all_Situation_SO[Random.Range(0,5)]);
-                    situation_SO_Coupled.Add(cardInstantiated.GetComponent<SituationCard>().situationData);
-    
                     cardInstantiated.transform.SetParent(cardSlots[i], false);
                     availableCardSlots[i] = false;
 
                     return;
                 }
             }
-
-
-
 
 
     }     
