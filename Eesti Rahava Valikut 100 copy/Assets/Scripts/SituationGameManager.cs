@@ -20,15 +20,10 @@ public class SituationGameManager : MonoBehaviour
     public TextMeshProUGUI situationDisplayAnswer3;
     public TextMeshProUGUI situationDisplayAnswer4;
 
- 
-
-    public List<GameObject> deck;
 
 
 
 
- 
-    
 
     private void Start()
     {
@@ -47,7 +42,6 @@ public class SituationGameManager : MonoBehaviour
     public List<SituationModelSO> situation_SO_Coupled;
     public List<SituationModelSO> situation_SO_Removed; 
     public List<SituationModelSO> situation_SO_To_Coupled;
-
     public GameObject situationCard;
     public GameObject cardInstantiated;
     public List <GameObject> cardInstantiated_List;
@@ -96,41 +90,21 @@ public class SituationGameManager : MonoBehaviour
         
     }
 
-
-
-        // //instantiating the prefab
-        // GameObject mySituationCard = Instantiate(situationCard, new Vector2(0, 0), Quaternion.identity);
-        // //calling the LoadCardData to retrieve data from scriptable object
-        // mySituationCard.GetComponent<SituationCard>().LoadCardData(All_Situation_SO[Random.Range(0,5)]);
-        // //store the scritable object into the list
-        // situationDrawn.Add(mySituationCard.GetComponent<SituationCard>().situationData);
-
-        // foreach (var item in situationDrawn){
-        //     results += item.id.ToString() + ", "; 
+    public void DisplayCard () 
+    {
+        // if(situationDisplayId.text == "0") {
+        //     situationDisplayId.text = this.GetComponent<SituationCard>().situationData.id.ToString();
         // }
-        
-        // Debug.Log(results);
-  
-        // for  (int i = 0; i < cardSlots.Length; i++){
-        //     if (availableCardSlots[i] == true){
-        //     mySituationCard.transform.SetParent(cardSlots[i], false);
-        //     availableCardSlots[i]=false;
-        //     return;
-        //     }
-        // }
-        
 
-    // public void DisplaySituation () 
-    // {
-    //     situationDisplayId.text = situationDrawn[0].id.ToString();
-    //     situationDisplayTitle.text = situationDrawn[0].title;
-    //     situationDisplayDescription.text = situationDrawn[0].description;
-    //     situationDisplayQuestion.text = situationDrawn[0].question;
-    //     situationDisplayAnswer1.text = situationDrawn[0].answer1;
-    //     situationDisplayAnswer2.text = situationDrawn[0].answer2;
-    //     situationDisplayAnswer3.text = situationDrawn[0].answer3;
-    //     situationDisplayAnswer4.text = situationDrawn[0].answer4;
-    // }
+        situationDisplayId.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.id.ToString();
+        situationDisplayTitle.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.title;
+        situationDisplayDescription.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.description;
+        situationDisplayQuestion.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.question;
+        situationDisplayAnswer1.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.answer1;
+        situationDisplayAnswer2.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.answer2;
+        situationDisplayAnswer3.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.answer3;
+        situationDisplayAnswer4.text = cardInstantiated_List[0].GetComponent<SituationCard>().situationData.answer4;
+    }
 
 
     }
