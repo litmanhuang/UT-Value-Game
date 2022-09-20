@@ -81,6 +81,7 @@ public class SituationGameManager : MonoBehaviour
                 Destroy(item);
             }
             cardInstantiated_List.Clear();
+            situation_SO_Removed.Clear();
             
              for(int i = 0; i < availableCardSlots.Length ; i++) {
                 availableCardSlots[i] = true;
